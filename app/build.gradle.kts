@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.dstod.weatherappudemy"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.dstod.weatherappudemy"
