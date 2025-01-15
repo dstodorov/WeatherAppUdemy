@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.dstod.weatherappudemy.pages.WeatherHomeScreen
 import com.dstod.weatherappudemy.ui.theme.WeatherAppUdemyTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,9 +19,21 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            WeatherAppUdemyTheme {
-
-            }
+            WeatherApp()
         }
     }
+}
+
+
+@Composable
+fun WeatherApp(modifier: Modifier = Modifier) {
+    WeatherAppUdemyTheme {
+        WeatherHomeScreen()
+    }
+}
+
+@Preview
+@Composable
+private fun WeatherAppPreview() {
+    WeatherApp()
 }
